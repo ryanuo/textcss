@@ -1,0 +1,44 @@
+{
+  "name": "@textcss/core",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "TextCSS core - the core of TextCSS",
+  "author": "Ryanuo <ryanuo@aliyun.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/ryanuo",
+  "homepage": "https://github.com/ryanuo/textcss#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanuo/textcss.git"
+  },
+  "bugs": "https://github.com/ryanuo/textcss/issues",
+  "keywords": [
+    "textcss",
+    "text",
+    "css",
+    "style",
+    "animation"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "style": "./dist/text.min.css",
+      "default": "./dist/text.min.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "style": "./dist/text.min.css",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "autoprefixer": "catalog:core",
+    "cssnano": "catalog:core",
+    "eslint-plugin-format": "^1.0.1",
+    "sass": "catalog:core",
+    "vite": "catalog:core"
+  }
+}

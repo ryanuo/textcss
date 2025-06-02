@@ -1,0 +1,62 @@
+// packages/core/src/index.scss
+
+// === 基础设置 ===
+@use 'sass:color';
+
+// 默认变量（可由主题覆盖）
+$glow-color: #00f !default;
+$gradient-from: #ff8a00 !default;
+$gradient-to: #e52e71 !default;
+$text-outline-color: #000 !default;
+
+// === 文本特效 ===
+
+// 发光文字
+.text-glow {
+  color: white;
+  text-shadow:
+    0 0 5px white,
+    0 0 10px $glow-color,
+    0 0 20px $glow-color,
+    0 0 40px $glow-color;
+}
+
+// 渐变文字
+.text-gradient {
+  background: linear-gradient(to right, $gradient-from, $gradient-to);
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+// 轮廓文字
+.text-outline {
+  color: transparent;
+}
+
+// 打字动画（可选动画模块）
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.text-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid currentColor;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards;
+}
+
+// === 未来拓展 ===
+// 可以添加更多模块：.text-neon, .text-fire, .text-rainbow...
+
+// === 导出结构 ===
+// 推荐使用 Vite/Sass 构建打包输出 dist/text.css
