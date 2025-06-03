@@ -1,0 +1,50 @@
+/* === Transform Variables === */
+:root {
+  --textcss-transform-scale: 1;
+  --textcss-transform-rotate: 0deg;
+  --textcss-transform-skew: 0deg;
+}
+
+/* === Text Transform Styles === */
+
+.uppercase-spacing {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.lowercase-fade {
+  text-transform: lowercase;
+  opacity: 0.85;
+}
+
+.capitalize-loose {
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+}
+
+.skew-text {
+  display: inline-block;
+  transform: skewX(-10deg);
+}
+
+.rotate-text {
+  display: inline-block;
+  transform: rotate(-3deg);
+}
+
+.scale-text {
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+.textcss-transform {
+  transform: scale(var(--textcss-transform-scale)) rotate(var(--textcss-transform-rotate))
+    skew(var(--textcss-transform-skew));
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.textcss-transform:hover {
+  --textcss-transform-scale: 1.1;
+  --textcss-transform-rotate: 5deg;
+}

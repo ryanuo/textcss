@@ -15,6 +15,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: '',
+        sassOptions: {
+          outputStyle: 'compressed',
+          sourceMap: true,
+        },
       },
     },
   },

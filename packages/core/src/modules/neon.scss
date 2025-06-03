@@ -1,0 +1,77 @@
+/* === Neon Variables === */
+:root {
+  --textcss-neon-color: #0ff;
+  --textcss-neon-glow:
+    0 0 5px var(--textcss-neon-color), 0 0 10px var(--textcss-neon-color), 0 0 20px var(--textcss-neon-color);
+  --textcss-neon-text-color: #fff;
+}
+
+/* === Neon Text Styles === */
+
+.neon-text-blue {
+  color: #0ff;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff;
+}
+
+.neon-text-pink {
+  color: #f0f;
+  text-shadow:
+    0 0 5px #f0f,
+    0 0 10px #f0f,
+    0 0 20px #f0f;
+}
+
+.neon-text-green {
+  color: #39ff14;
+  text-shadow:
+    0 0 5px #39ff14,
+    0 0 10px #39ff14,
+    0 0 20px #39ff14;
+}
+
+.neon-glow {
+  color: #fff;
+  text-shadow:
+    0 0 3px #fff,
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff;
+}
+
+.neon-border {
+  color: #000;
+  background: #0ff;
+  text-shadow: none;
+  padding: 0.25em 0.5em;
+  border: 2px solid #0ff;
+  box-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff;
+}
+
+.textcss-neon {
+  color: var(--textcss-neon-text-color);
+  text-shadow: var(--textcss-neon-glow);
+  animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.textcss-neon-static {
+  color: var(--textcss-neon-text-color);
+  text-shadow: var(--textcss-neon-glow);
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: var(--textcss-neon-glow);
+  }
+  to {
+    text-shadow:
+      0 0 2px var(--textcss-neon-color),
+      0 0 4px var(--textcss-neon-color),
+      0 0 6px var(--textcss-neon-color);
+  }
+}

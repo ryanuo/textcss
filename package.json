@@ -34,6 +34,14 @@
     "vite": "catalog:",
     "vitest": "catalog:"
   },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "simple-git-hooks",
+      "unrs-resolver"
+    ]
+  },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },

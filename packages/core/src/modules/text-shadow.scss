@@ -1,0 +1,27 @@
+/* === Text Shadow Variables === */
+:root {
+  --textcss-shadow-color: rgba(0, 0, 0, 0.5);
+  --textcss-shadow-blur: 2px;
+  --textcss-shadow-offset-x: 1px;
+  --textcss-shadow-offset-y: 1px;
+}
+
+.text-shadow-pop {
+  text-shadow: 1px 1px 0 #000;
+}
+
+.glow {
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #f0f,
+    0 0 15px #0ff;
+}
+
+.ghost-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.textcss-shadow {
+  text-shadow: var(--textcss-shadow-offset-x) var(--textcss-shadow-offset-y) var(--textcss-shadow-blur)
+    var(--textcss-shadow-color);
+}

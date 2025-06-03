@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextCSS Custom Animation Effects Demo</title>
+  <link rel="stylesheet" href="/text.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .demo-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .demo-text {
+      font-size: 1.5rem;
+      color: #333;
+      animation-iteration-count: infinite
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <div class="textcss-typing demo-text" style="--textcss-animation-duration: 2s; --textcss-animation-timing: steps(30, end);">
+      Custom Typing Effect
+    </div>
+    <div class="textcss-fade-in demo-text" style="--textcss-animation-duration: 1s; --textcss-animation-timing: ease-out;">
+      Custom Fade In
+    </div>
+    <div class="textcss-slide-in demo-text" style="--textcss-animation-duration: 0.8s; --textcss-animation-timing: cubic-bezier(0.4, 0, 0.2, 1);">
+      Custom Slide In
+    </div>
+  </div>
+</body>
+</html> 

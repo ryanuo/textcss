@@ -32,7 +32,8 @@
   "style": "./dist/text.min.css",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build && pnpm run docs:test-build",
+    "docs:test-build": "mkdir -p ../../docs/public && cp ./dist/text.min.css ../../docs/public/text.min.css"
   },
   "devDependencies": {
     "autoprefixer": "catalog:core",

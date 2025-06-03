@@ -1,0 +1,62 @@
+/* === Fancy Underline Variables === */
+:root {
+  --textcss-underline-color: currentColor;
+  --textcss-underline-width: 2px;
+  --textcss-underline-style: solid;
+  --textcss-underline-offset: 2px;
+}
+
+/* === Fancy Underline Styles === */
+
+.fancy-underline {
+  text-decoration: underline wavy red;
+}
+
+.underline-dotted {
+  text-decoration: underline dotted #555;
+}
+
+.underline-double {
+  text-decoration: underline double #007acc;
+}
+
+.underline-dashed {
+  text-decoration: underline dashed orange;
+}
+
+.underline-gradient {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+
+.underline-gradient::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+}
+
+.textcss-underline {
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: calc(-1 * var(--textcss-underline-offset));
+    width: 100%;
+    height: var(--textcss-underline-width);
+    background-color: var(--textcss-underline-color);
+    border-style: var(--textcss-underline-style);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(0.8);
+  }
+}

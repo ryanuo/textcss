@@ -1,0 +1,31 @@
+.theme-paper {
+  // Text Animation
+  --textcss-animation-duration: 0.5s;
+  --textcss-animation-timing: ease-out;
+
+  // Outline
+  --textcss-outline-color: #2c3e50;
+  --textcss-outline-width: 1px;
+
+  // Neon
+  --textcss-neon-color: #34495e;
+  --textcss-neon-text-color: #2c3e50;
+  --textcss-neon-glow: 0 0 2px var(--textcss-neon-color), 0 0 4px var(--textcss-neon-color);
+
+  // Transform
+  --textcss-transform-scale: 1;
+  --textcss-transform-rotate: 0deg;
+  --textcss-transform-skew: 0deg;
+
+  // Fancy Underline
+  --textcss-underline-color: #34495e;
+  --textcss-underline-width: 1px;
+  --textcss-underline-style: solid;
+  --textcss-underline-offset: 2px;
+
+  // Text Shadow
+  --textcss-shadow-color: rgba(44, 62, 80, 0.3);
+  --textcss-shadow-blur: 2px;
+  --textcss-shadow-offset-x: 1px;
+  --textcss-shadow-offset-y: 1px;
+}

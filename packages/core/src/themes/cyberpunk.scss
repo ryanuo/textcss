@@ -1,0 +1,33 @@
+.theme-cyberpunk {
+  // Text Animation
+  --textcss-animation-duration: 0.3s;
+  --textcss-animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Outline
+  --textcss-outline-color: #ff00ff;
+  --textcss-outline-width: 1px;
+
+  // Neon
+  --textcss-neon-color: #00ffff;
+  --textcss-neon-text-color: #ffffff;
+  --textcss-neon-glow:
+    0 0 5px var(--textcss-neon-color), 0 0 10px var(--textcss-neon-color), 0 0 20px var(--textcss-neon-color),
+    0 0 40px var(--textcss-neon-color);
+
+  // Transform
+  --textcss-transform-scale: 1;
+  --textcss-transform-rotate: 0deg;
+  --textcss-transform-skew: -2deg;
+
+  // Fancy Underline
+  --textcss-underline-color: #ff00ff;
+  --textcss-underline-width: 2px;
+  --textcss-underline-style: solid;
+  --textcss-underline-offset: 4px;
+
+  // Text Shadow
+  --textcss-shadow-color: rgba(255, 0, 255, 0.5);
+  --textcss-shadow-blur: 4px;
+  --textcss-shadow-offset-x: 2px;
+  --textcss-shadow-offset-y: 2px;
+}
