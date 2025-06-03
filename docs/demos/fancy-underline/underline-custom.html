@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextCSS - Custom Underline Effect Demo</title>
+  <link rel="stylesheet" href="/text.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      min-height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+    }
+    .demo-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .solid {
+      --textcss-underline-color: #ff6b6b;
+      --textcss-underline-width: 2px;
+      --textcss-underline-style: solid;
+    }
+    .dashed {
+      --textcss-underline-color: #4ecdc4;
+      --textcss-underline-width: 2px;
+      --textcss-underline-style: dashed;
+    }
+    .dotted {
+      --textcss-underline-color: #45b7d1;
+      --textcss-underline-width: 2px;
+      --textcss-underline-style: dotted;
+    }
+    .wavy {
+      --textcss-underline-color: #96ceb4;
+      --textcss-underline-width: 2px;
+      --textcss-underline-style: wavy;
+    }
+    .double {
+      --textcss-underline-color: #ff9f1c;
+      --textcss-underline-width: 2px;
+      --textcss-underline-style: double;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-text textcss-underline solid">Solid Underline</div>
+  <div class="demo-text textcss-underline dashed">Dashed Underline</div>
+  <div class="demo-text textcss-underline dotted">Dotted Underline</div>
+  <div class="demo-text textcss-underline wavy">Wavy Underline</div>
+  <div class="demo-text textcss-underline double">Double Underline</div>
+</body>
+</html> 

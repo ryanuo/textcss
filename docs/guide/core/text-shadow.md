@@ -12,6 +12,8 @@ TextCSS 的文字阴影模块为文字添加了精美的阴影效果，让您的
 <div class="textcss-shadow">Shadowed Text</div>
 ```
 
+<demo html="../../demos/text-shadow/basic.html" />
+
 ## 自定义变量
 
 您可以通过以下 CSS 变量自定义阴影效果：
@@ -68,6 +70,8 @@ TextCSS 的文字阴影模块为文字添加了精美的阴影效果，让您的
   --textcss-shadow-offset-y: 2px;
 }
 ```
+
+<demo html="../../demos/text-shadow/custom.html" />
 
 ### 多层阴影
 

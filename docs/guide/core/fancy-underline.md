@@ -12,6 +12,8 @@ TextCSS 的装饰性下划线模块为文字添加了精美的下划线效果，
 <div class="textcss-underline">Underlined Text</div>
 ```
 
+<!-- <demo html="../../demos/fancy-underline/underline.html" /> -->
+
 ## 自定义变量
 
 您可以通过以下 CSS 变量自定义下划线效果：
@@ -72,6 +74,8 @@ TextCSS 的装饰性下划线模块为文字添加了精美的下划线效果，
   --textcss-underline-offset: 3px;
 }
 ```
+
+<demo html="../../demos/fancy-underline/underline-custom.html" />
 
 ### 悬停效果
 

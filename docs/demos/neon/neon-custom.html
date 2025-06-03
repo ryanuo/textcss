@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextCSS - Custom Neon Effects Demo</title>
+  <link rel="stylesheet" href="/text.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      min-height: 100vh;
+      margin: 0;
+      background: #000;
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+    }
+    .demo-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .pink {
+      --textcss-neon-color: #ff00ff;
+      --textcss-neon-text-color: #ffffff;
+    }
+    .green {
+      --textcss-neon-color: #00ff00;
+      --textcss-neon-text-color: #ffffff;
+      --textcss-neon-glow:
+        0 0 10px var(--textcss-neon-color),
+        0 0 20px var(--textcss-neon-color),
+        0 0 30px var(--textcss-neon-color);
+    }
+    .blue {
+      --textcss-neon-color: #00ffff;
+      --textcss-neon-text-color: #ffffff;
+      --textcss-neon-glow:
+        0 0 5px var(--textcss-neon-color),
+        0 0 10px var(--textcss-neon-color),
+        0 0 20px var(--textcss-neon-color),
+        0 0 40px var(--textcss-neon-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-text textcss-neon pink">Pink Neon</div>
+  <div class="demo-text textcss-neon green">Green Neon</div>
+  <div class="demo-text textcss-neon blue">Blue Neon</div>
+</body>
+</html> 

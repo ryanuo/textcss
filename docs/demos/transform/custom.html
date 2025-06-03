@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextCSS - Custom Transform Demo</title>
+  <link rel="stylesheet" href="/text.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      min-height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+    }
+    .demo-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+      transition: transform 0.3s ease;
+    }
+    .scale {
+      --textcss-transform-scale: 1.2;
+    }
+    .rotate {
+      --textcss-transform-rotate: 15deg;
+    }
+    .skew {
+      --textcss-transform-skew: 10deg;
+    }
+    .combined {
+      --textcss-transform-scale: 1.1;
+      --textcss-transform-rotate: 5deg;
+      --textcss-transform-skew: 2deg;
+    }
+    .hover-scale:hover {
+      --textcss-transform-scale: 1.2;
+    }
+    .hover-rotate:hover {
+      --textcss-transform-rotate: 10deg;
+    }
+    .hover-combined:hover {
+      --textcss-transform-scale: 1.1;
+      --textcss-transform-rotate: 5deg;
+      --textcss-transform-skew: 2deg;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-text textcss-transform scale">Scale</div>
+  <div class="demo-text textcss-transform rotate">Rotate</div>
+  <div class="demo-text textcss-transform skew">Skew</div>
+  <div class="demo-text textcss-transform combined">Combined</div>
+  <div class="demo-text textcss-transform hover-scale">Hover Scale</div>
+  <div class="demo-text textcss-transform hover-rotate">Hover Rotate</div>
+  <div class="demo-text textcss-transform hover-combined">Hover Combined</div>
+</body>
+</html> 

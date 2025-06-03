@@ -7,7 +7,7 @@ import { version } from '../../package.json'
 import vite from './vite.config'
 
 const GUIDES: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Getting Started', link: '/guide/' },
+  // { text: 'Getting Started', link: '/guide/' },
   { text: 'Core Modules', link: '/guide/core/' },
 ]
 

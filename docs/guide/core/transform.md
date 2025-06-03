@@ -12,6 +12,8 @@ TextCSS 的变换效果模块为文字添加了各种变换效果，让您的文
 <div class="textcss-transform">Transformed Text</div>
 ```
 
+<demo html="../../demos/transform/basic.html" />
+
 ## 自定义变量
 
 您可以通过以下 CSS 变量自定义变换效果：
@@ -63,6 +65,8 @@ TextCSS 的变换效果模块为文字添加了各种变换效果，让您的文
   --textcss-transform-skew: 2deg;
 }
 ```
+
+<demo html="../../demos/transform/custom.html" />
 
 ### 悬停效果
 

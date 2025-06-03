@@ -12,6 +12,8 @@ TextCSS 的轮廓效果模块为文字添加了精美的轮廓效果，让您的
 <div class="textcss-outline">Outlined Text</div>
 ```
 
+<demo html="../../demos/outline/outline.html" />
+
 ### 偏移轮廓 (textcss-outline-offset)
 
 为文字添加带偏移的轮廓效果。
@@ -19,6 +21,8 @@ TextCSS 的轮廓效果模块为文字添加了精美的轮廓效果，让您的
 ```html
 <div class="textcss-outline-offset">Offset Outlined Text</div>
 ```
+
+<demo html="../../demos/outline/outline-offset.html" />
 
 ## 自定义变量
 

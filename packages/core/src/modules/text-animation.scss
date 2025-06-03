@@ -3,6 +3,9 @@
   --textcss-animation-duration: 0.5s;
   --textcss-animation-timing: ease-in-out;
   --textcss-animation-delay: 0s;
+  --textcss-animation-iteration: 1;
+  --textcss-animation-direction: normal;
+  --textcss-animation-fill-mode: forwards;
 }
 
 /* === Text Animation Styles === */
@@ -78,21 +81,41 @@
   border-right: 2px solid;
   animation:
     textcss-typing var(--textcss-animation-duration) var(--textcss-animation-timing) var(--textcss-animation-delay)
-      forwards,
+      var(--textcss-animation-fill-mode),
     textcss-blink 0.75s step-end infinite;
 }
 
 .textcss-fade-in {
   opacity: 0;
   animation: fade-in var(--textcss-animation-duration) var(--textcss-animation-timing) var(--textcss-animation-delay)
-    forwards;
+    var(--textcss-animation-fill-mode);
 }
 
 .textcss-slide-in {
   transform: translateY(20px);
   opacity: 0;
   animation: slide-in var(--textcss-animation-duration) var(--textcss-animation-timing) var(--textcss-animation-delay)
-    forwards;
+    var(--textcss-animation-fill-mode);
+}
+
+.textcss-bounce {
+  animation: bounce var(--textcss-animation-duration) cubic-bezier(0.36, 0, 0.66, -0.56) var(--textcss-animation-delay)
+    var(--textcss-animation-iteration) var(--textcss-animation-direction) var(--textcss-animation-fill-mode);
+}
+
+.textcss-shake {
+  animation: shake var(--textcss-animation-duration) cubic-bezier(0.36, 0.07, 0.19, 0.97) var(--textcss-animation-delay)
+    var(--textcss-animation-iteration) var(--textcss-animation-direction) var(--textcss-animation-fill-mode);
+}
+
+.textcss-pulse {
+  animation: pulse var(--textcss-animation-duration) ease-in-out var(--textcss-animation-delay)
+    var(--textcss-animation-iteration) var(--textcss-animation-direction) var(--textcss-animation-fill-mode);
+}
+
+.textcss-spin {
+  animation: spin var(--textcss-animation-duration) linear var(--textcss-animation-delay)
+    var(--textcss-animation-iteration) var(--textcss-animation-direction) var(--textcss-animation-fill-mode);
 }
 
 @keyframes fade-in {
@@ -105,5 +128,62 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

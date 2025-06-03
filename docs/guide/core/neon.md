@@ -12,6 +12,8 @@ TextCSS 的霓虹灯效果模块为文字添加了炫酷的发光效果，让您
 <div class="textcss-neon-static">Neon Text</div>
 ```
 
+<demo html="../../demos/neon/neon-static.html" />
+
 ### 动态霓虹 (textcss-neon)
 
 创建一个带有呼吸效果的动态霓虹灯效果。
@@ -19,6 +21,8 @@ TextCSS 的霓虹灯效果模块为文字添加了炫酷的发光效果，让您
 ```html
 <div class="textcss-neon">Pulsing Neon Text</div>
 ```
+
+<demo html="../../demos/neon/neon-pulse.html" />
 
 ## 自定义变量
 
@@ -67,6 +71,8 @@ TextCSS 的霓虹灯效果模块为文字添加了炫酷的发光效果，让您
     0 0 10px var(--textcss-neon-color), 0 0 20px var(--textcss-neon-color), 0 0 30px var(--textcss-neon-color);
 }
 ```
+
+<demo html="../../demos/neon/neon-custom.html" />
 
 ## 注意事项
 
