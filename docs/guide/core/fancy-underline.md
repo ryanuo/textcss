@@ -12,7 +12,7 @@ TextCSS 的装饰性下划线模块为文字添加了精美的下划线效果，
 <div class="textcss-underline">Underlined Text</div>
 ```
 
-<!-- <demo html="../../demos/fancy-underline/underline.html" /> -->
+<demo html="../../demos/fancy-underline/underline.html" />
 
 ## 自定义变量
 
