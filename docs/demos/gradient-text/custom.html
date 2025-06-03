@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Gradient Text Demo</title>
+  <link rel="stylesheet" href="/text.min.css">
+  <style>
+    :root {
+      /* 渐变颜色 */
+      --textcss-gradient-colors: #ff6b6b, #4ecdc4, #45b7d1;
+      --textcss-gradient-direction: to right;
+      --textcss-gradient-duration: 3s;
+    }
+
+    .demo-container {
+      padding: 2rem;
+      background: #f5f5f5;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .demo-container h2 {
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+
+    /* 自定义渐变效果 */
+    .sunset-gradient {
+      --textcss-gradient-colors: #ff7e5f, #feb47b;
+      --textcss-gradient-direction: 45deg;
+    }
+
+    .ocean-gradient {
+      --textcss-gradient-colors: #2193b0, #6dd5ed;
+      --textcss-gradient-direction: to right;
+    }
+
+    .forest-gradient {
+      --textcss-gradient-colors: #134E5E, #71B280;
+      --textcss-gradient-direction: to bottom;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h2 class="text-gradient sunset-gradient">Sunset Gradient</h2>
+    <h2 class="text-gradient ocean-gradient">Ocean Gradient</h2>
+    <h2 class="text-gradient forest-gradient">Forest Gradient</h2>
+  </div>
+</body>
+</html> 

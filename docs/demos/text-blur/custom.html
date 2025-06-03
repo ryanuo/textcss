@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Text Blur Demo</title>
+  <link rel="stylesheet" href="/text.min.css">
+  <style>
+    :root {
+      /* 模糊效果变量 */
+      --textcss-blur-sm: 1px;
+      --textcss-blur-md: 3px;
+      --textcss-blur-lg: 4px;
+      --textcss-transition-duration: 0.3s;
+      --textcss-transition-timing: ease;
+      --textcss-blur-duration: 3s;
+    }
+
+    .demo-container {
+      padding: 2rem;
+      background: #f5f5f5;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .demo-container h2 {
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+
+    /* 轻微模糊效果 */
+    .blur-light {
+      --textcss-blur-amount: var(--textcss-blur-sm);
+    }
+
+    /* 中等模糊效果 */
+    .blur-medium {
+      --textcss-blur-amount: var(--textcss-blur-md);
+    }
+
+    /* 强烈模糊效果 */
+    .blur-strong {
+      --textcss-blur-amount: var(--textcss-blur-lg);
+    }
+
+    /* 自定义动画效果 */
+    .blur-pulse {
+      --textcss-blur-min: 0;
+      --textcss-blur-max: var(--textcss-blur-lg);
+      --textcss-blur-duration: 3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h2 class="text-blur blur-light">轻微模糊</h2>
+    <h2 class="text-blur blur-medium">中等模糊</h2>
+    <h2 class="text-blur blur-strong">强烈模糊</h2>
+    <h2 class="text-blur-animated blur-pulse">脉冲动画</h2>
+  </div>
+</body>
+</html> 

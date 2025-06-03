@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Text Demo</title>
+  <link rel="stylesheet" href="/text.min.css">
+  <style>
+    :root {
+      /* 渐变颜色 */
+      --textcss-gradient-colors: #ff6b6b, #4ecdc4, #45b7d1;
+      --textcss-gradient-direction: to right;
+      --textcss-gradient-duration: 3s;
+    }
+
+    .demo-container {
+      padding: 2rem;
+      background: #f5f5f5;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .demo-container h2 {
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h2 class="text-gradient">Gradient Text</h2>
+    <h2 class="text-gradient-radial">Radial Gradient</h2>
+    <h2 class="text-gradient-animated">Animated Gradient</h2>
+  </div>
+</body>
+</html> 

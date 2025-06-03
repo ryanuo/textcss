@@ -37,7 +37,6 @@ catalogs:
     autoprefixer: ^10.4.20
     cssnano: ^6.1.2
     sass: ^1.89.1
-    vite: ^5.4.19
 
   docs:
     vitepress-demo-plugin: ^1.4.5

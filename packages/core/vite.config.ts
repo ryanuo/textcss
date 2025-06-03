@@ -1,7 +1,6 @@
 import path from 'node:path'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
-// vite.config.ts
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -15,10 +14,6 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: '',
-        sassOptions: {
-          outputStyle: 'compressed',
-          sourceMap: true,
-        },
       },
     },
   },

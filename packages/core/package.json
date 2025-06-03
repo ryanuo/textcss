@@ -40,6 +40,6 @@
     "cssnano": "catalog:core",
     "eslint-plugin-format": "^1.0.1",
     "sass": "catalog:core",
-    "vite": "catalog:core"
+    "vite": "catalog:"
   }
 }

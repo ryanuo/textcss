@@ -1,0 +1,70 @@
+// Colors
+$primary-color: #333;
+$secondary-color: #666;
+$accent-color: #007bff;
+
+// Text Effects
+$text-shadow-color: rgba(0, 0, 0, 0.3);
+$text-shadow-blur: 2px;
+$text-shadow-offset: 1px;
+
+// Animation
+$transition-duration: 0.3s;
+$transition-timing: ease;
+
+// Blur
+$blur-sm: 1px;
+$blur-md: 2px;
+$blur-lg: 4px;
+
+// Glitch
+$glitch-offset: 2px;
+$glitch-intensity: 0.1;
+$glitch-duration: 0.3s;
+
+// Gradient
+$gradient-colors: (#ff6b6b, #4ecdc4, #45b7d1);
+$gradient-direction: to right;
+$gradient-duration: 3s;
+
+// Z-index
+$z-index-base: 1;
+$z-index-overlay: 10;
+$z-index-modal: 100;
+
+// CSS Variables
+:root {
+  // Colors
+  --textcss-primary-color: #{$primary-color};
+  --textcss-secondary-color: #{$secondary-color};
+  --textcss-accent-color: #{$accent-color};
+
+  // Text Effects
+  --textcss-text-shadow-color: #{$text-shadow-color};
+  --textcss-text-shadow-blur: #{$text-shadow-blur};
+  --textcss-text-shadow-offset: #{$text-shadow-offset};
+
+  // Animation
+  --textcss-transition-duration: #{$transition-duration};
+  --textcss-transition-timing: #{$transition-timing};
+
+  // Blur
+  --textcss-blur-sm: #{$blur-sm};
+  --textcss-blur-md: #{$blur-md};
+  --textcss-blur-lg: #{$blur-lg};
+
+  // Glitch
+  --textcss-glitch-offset: #{$glitch-offset};
+  --textcss-glitch-intensity: #{$glitch-intensity};
+  --textcss-glitch-duration: #{$glitch-duration};
+
+  // Gradient
+  --textcss-gradient-colors: #{$gradient-colors};
+  --textcss-gradient-direction: #{$gradient-direction};
+  --textcss-gradient-duration: #{$gradient-duration};
+
+  // Z-index
+  --textcss-z-index-base: #{$z-index-base};
+  --textcss-z-index-overlay: #{$z-index-overlay};
+  --textcss-z-index-modal: #{$z-index-modal};
+}

@@ -4,6 +4,18 @@ TextCSS 的核心模块提供了一系列强大的文本样式和动画效果。
 
 ## 可用模块
 
+### Gradient Text
+为文字添加渐变色效果，支持线性和径向渐变，可自定义颜色、方向和动画。
+[了解更多 →](./gradient-text)
+
+### Text Blur
+实现文字模糊效果，适用于加载状态或背景装饰，支持模糊度和交互动画。
+[了解更多 →](./text-blur)
+
+### Glitch Text
+模拟数字故障风格的文字特效，支持颜色偏移、抖动、切片等可调节参数。
+[了解更多 →](./glitch-text)
+
 ### Text Animation
 提供多种文字动画效果，包括打字机效果、淡入淡出、滑动等。
 [了解更多 →](./text-animation)
@@ -33,6 +45,15 @@ TextCSS 的核心模块提供了一系列强大的文本样式和动画效果。
 所有模块都使用 CSS 类名来应用效果。例如：
 
 ```html
+<!-- 添加渐变文字效果 -->
+<div class="text-gradient">Gradient Text</div>
+
+<!-- 添加模糊文字效果 -->
+<div class="text-blur">Blurred Text</div>
+
+<!-- 添加故障文字效果 -->
+<div class="text-glitch" data-text="Glitch Text">Glitch Text</div>
+
 <!-- 添加打字机效果 -->
 <div class="textcss-typing">Hello World</div>
 
@@ -46,6 +67,18 @@ TextCSS 的核心模块提供了一系列强大的文本样式和动画效果。
 
 ```css
 :root {
+  /* 渐变文字相关变量 */
+  --textcss-gradient-colors: #ff6b6b, #4ecdc4;
+  --textcss-gradient-direction: to right;
+
+  /* 模糊文字相关变量 */
+  --textcss-blur-amount: 2px;
+  --textcss-blur-duration: 0.3s;
+
+  /* 故障文字相关变量 */
+  --textcss-glitch-offset: 2px;
+  --textcss-glitch-intensity: 0.1;
+
   /* 动画相关变量 */
   --textcss-animation-duration: 0.5s;
 

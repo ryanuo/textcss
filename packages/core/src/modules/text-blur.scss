@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use '../variables' as *;
+
+// Text Blur Mixins
+@mixin text-blur($blur-amount: var(--textcss-blur-amount, $blur-md)) {
+  filter: blur($blur-amount);
+  transition: filter var(--textcss-transition-duration, $transition-duration)
+    var(--textcss-transition-timing, $transition-timing);
+
+  &:hover {
+    filter: blur(0);
+  }
+}
+
+// Animated Text Blur
+@mixin animated-text-blur(
+  $min-blur: var(--textcss-blur-min, 0),
+  $max-blur: var(--textcss-blur-max, $blur-lg),
+  $duration: var(--textcss-blur-duration, $gradient-duration)
+) {
+  animation: blur-pulse $duration ease-in-out infinite;
+}
+
+@keyframes blur-pulse {
+  0%,
+  100% {
+    filter: blur(var(--textcss-blur-min, 0));
+  }
+  50% {
+    filter: blur(var(--textcss-blur-max, $blur-lg));
+  }
+}
+
+// Utility Classes
+.text-blur {
+  @include text-blur();
+}
+
+.text-blur-sm {
+  @include text-blur(var(--textcss-blur-sm, $blur-sm));
+}
+
+.text-blur-md {
+  @include text-blur(var(--textcss-blur-md, $blur-md));
+}
+
+.text-blur-lg {
+  @include text-blur(var(--textcss-blur-lg, $blur-lg));
+}
+
+.text-blur-animated {
+  @include animated-text-blur();
+}

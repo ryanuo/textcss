@@ -1,0 +1,104 @@
+@use 'sass:map';
+@use '../variables' as *;
+
+// Glitch Text Mixins
+@mixin glitch-text(
+  $color-offset: var(--textcss-glitch-offset, $glitch-offset),
+  $glitch-intensity: var(--textcss-glitch-intensity, $glitch-intensity),
+  $duration: var(--textcss-glitch-duration, $glitch-duration)
+) {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+  }
+
+  &::before {
+    left: $color-offset;
+    text-shadow: -2px 0 red;
+    animation: glitch-anim-1 $duration infinite linear alternate-reverse;
+  }
+
+  &::after {
+    left: calc(-1 * #{$color-offset});
+    text-shadow: 2px 0 blue;
+    animation: glitch-anim-2 $duration infinite linear alternate-reverse;
+  }
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(20% 0 30% 0);
+    transform: translate(-$glitch-offset, -$glitch-offset);
+  }
+  20% {
+    clip-path: inset(60% 0 10% 0);
+    transform: translate($glitch-offset, $glitch-offset);
+  }
+  40% {
+    clip-path: inset(40% 0 50% 0);
+    transform: translate(-$glitch-offset, $glitch-offset);
+  }
+  60% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate($glitch-offset, -$glitch-offset);
+  }
+  80% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-$glitch-offset, -$glitch-offset);
+  }
+  100% {
+    clip-path: inset(30% 0 20% 0);
+    transform: translate($glitch-offset, $glitch-offset);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(30% 0 20% 0);
+    transform: translate($glitch-offset, $glitch-offset);
+  }
+  20% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-$glitch-offset, -$glitch-offset);
+  }
+  40% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate($glitch-offset, -$glitch-offset);
+  }
+  60% {
+    clip-path: inset(40% 0 50% 0);
+    transform: translate(-$glitch-offset, $glitch-offset);
+  }
+  80% {
+    clip-path: inset(60% 0 10% 0);
+    transform: translate($glitch-offset, $glitch-offset);
+  }
+  100% {
+    clip-path: inset(20% 0 30% 0);
+    transform: translate(-$glitch-offset, -$glitch-offset);
+  }
+}
+
+// Utility Classes
+.text-glitch {
+  @include glitch-text();
+}
+
+.text-glitch-intense {
+  @include glitch-text(
+    $color-offset: var(--textcss-glitch-offset-intense, #{$glitch-offset * 2}),
+    $glitch-intensity: var(--textcss-glitch-intensity-intense, #{$glitch-intensity * 2})
+  );
+}
+
+.text-glitch-slow {
+  @include glitch-text($duration: var(--textcss-glitch-duration-slow, #{$glitch-duration * 1.5}));
+}

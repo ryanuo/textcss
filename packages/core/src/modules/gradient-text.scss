@@ -1,0 +1,57 @@
+@use 'sass:map';
+@use '../variables' as *;
+
+// Gradient Text Mixins
+@mixin gradient-text(
+  $colors: var(--textcss-gradient-colors),
+  $direction: var(--textcss-gradient-direction),
+  $type: linear
+) {
+  @if $type == linear {
+    background: linear-gradient($direction, $colors);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  } @else if $type == radial {
+    background: radial-gradient(circle at center, $colors);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+// Animated Gradient Text
+@mixin animated-gradient-text(
+  $colors: var(--textcss-gradient-colors),
+  $direction: var(--textcss-gradient-direction),
+  $duration: var(--textcss-gradient-duration)
+) {
+  background: linear-gradient($direction, $colors);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift $duration linear infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+// Utility Classes
+.text-gradient {
+  @include gradient-text();
+}
+
+.text-gradient-radial {
+  @include gradient-text($type: radial);
+}
+
+.text-gradient-animated {
+  @include animated-gradient-text();
+}
