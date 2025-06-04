@@ -1,7 +1,7 @@
 {
   "name": "@textcss/core",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TextCSS core - the core of TextCSS",
   "author": "Ryanuo <ryanuo@aliyun.com>",
   "license": "MIT",
