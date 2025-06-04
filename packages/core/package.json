@@ -1,7 +1,7 @@
 {
   "name": "@textcss/core",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "TextCSS core - the core of TextCSS",
   "author": "Ryanuo <ryanuo@aliyun.com>",
   "license": "MIT",
@@ -31,15 +31,18 @@
   ],
   "style": "./dist/text.min.css",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build --watch",
     "build": "vite build && pnpm run docs:test-build",
     "docs:test-build": "mkdir -p ../../docs/public && cp ./dist/text.min.css ../../docs/public/text.min.css"
+  },
+  "dependencies": {
+    "sass": "catalog:"
   },
   "devDependencies": {
     "autoprefixer": "catalog:core",
     "cssnano": "catalog:core",
-    "eslint-plugin-format": "^1.0.1",
-    "sass": "catalog:core",
+    "eslint-plugin-format": "catalog:core",
+    "typescript": "catalog:core",
     "vite": "catalog:"
   }
 }

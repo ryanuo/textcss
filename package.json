@@ -15,7 +15,8 @@
     "release": "bumpp -r && pnpm -r publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "tailwind": "esno scripts/tailwind.ts"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
@@ -27,6 +28,7 @@
     "eslint": "catalog:",
     "lint-staged": "catalog:",
     "pnpm": "catalog:",
+    "sass": "catalog:",
     "simple-git-hooks": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:",

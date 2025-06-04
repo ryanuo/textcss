@@ -19,14 +19,18 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.scss'),
-      name: 'TextCSS',
-      fileName: () => 'text.css',
+      entry: [
+        path.resolve(__dirname, 'src/index.scss'),
+      ],
       formats: ['es'],
     },
     rollupOptions: {
+      external: ['sass'],
       output: {
-        assetFileNames: () => 'text.min.css',
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        dir: 'dist',
+        assetFileNames: 'text.min.css',
       },
     },
     emptyOutDir: true,
