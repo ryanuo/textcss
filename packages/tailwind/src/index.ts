@@ -1,14 +1,7 @@
 import type { PluginAPI } from 'tailwindcss/types/config'
 import plugin from 'tailwindcss/plugin'
+import keyframes from './keyframes'
 import utilities from './utilities'
-
-interface Keyframes {
-  [key: string]: {
-    [key: string]: {
-      [key: string]: string
-    }
-  }
-}
 
 interface ThemeConfig {
   theme: {
@@ -33,80 +26,6 @@ interface ThemeConfig {
       }
     }
   }
-}
-
-const keyframes: Keyframes = {
-  '@keyframes blur-pulse': {
-    '0%, 100%': {
-      filter: 'blur(0)',
-    },
-    '50%': {
-      filter: 'blur(var(--textcss-blur-max, 4px))',
-    },
-  },
-  '@keyframes glitch-anim-1': {
-    '0%': {
-      'clip-path': 'inset(20% 0 30% 0)',
-      'transform': 'translate(-2px, -2px)',
-    },
-    '20%': {
-      'clip-path': 'inset(60% 0 10% 0)',
-      'transform': 'translate(2px, 2px)',
-    },
-    '40%': {
-      'clip-path': 'inset(40% 0 50% 0)',
-      'transform': 'translate(-2px, 2px)',
-    },
-    '60%': {
-      'clip-path': 'inset(80% 0 5% 0)',
-      'transform': 'translate(2px, -2px)',
-    },
-    '80%': {
-      'clip-path': 'inset(10% 0 70% 0)',
-      'transform': 'translate(-2px, -2px)',
-    },
-    '100%': {
-      'clip-path': 'inset(30% 0 20% 0)',
-      'transform': 'translate(2px, 2px)',
-    },
-  },
-  '@keyframes glitch-anim-2': {
-    '0%': {
-      'clip-path': 'inset(30% 0 20% 0)',
-      'transform': 'translate(2px, 2px)',
-    },
-    '20%': {
-      'clip-path': 'inset(10% 0 70% 0)',
-      'transform': 'translate(-2px, -2px)',
-    },
-    '40%': {
-      'clip-path': 'inset(80% 0 5% 0)',
-      'transform': 'translate(2px, -2px)',
-    },
-    '60%': {
-      'clip-path': 'inset(40% 0 50% 0)',
-      'transform': 'translate(-2px, 2px)',
-    },
-    '80%': {
-      'clip-path': 'inset(60% 0 10% 0)',
-      'transform': 'translate(2px, 2px)',
-    },
-    '100%': {
-      'clip-path': 'inset(20% 0 30% 0)',
-      'transform': 'translate(-2px, -2px)',
-    },
-  },
-  '@keyframes gradient-shift': {
-    '0%': {
-      'background-position': '0% 50%',
-    },
-    '50%': {
-      'background-position': '100% 50%',
-    },
-    '100%': {
-      'background-position': '0% 50%',
-    },
-  },
 }
 
 const themeConfig: ThemeConfig = {

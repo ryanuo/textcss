@@ -15,6 +15,7 @@ hero:
   image:
     src: /logo.svg
     alt: TextCSS
+
 features:
   - title: Text Animation
     details: Create beautiful text animations with ease. Support for typing effects, fade-ins, and more.

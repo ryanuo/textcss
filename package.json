@@ -16,7 +16,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
-    "tailwind": "esno scripts/tailwind.ts"
+    "tailwind": "esno scripts/generate_tailwind.ts"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
