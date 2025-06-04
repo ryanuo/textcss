@@ -1,7 +1,7 @@
 {
   "name": "textcss",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "packageManager": "pnpm@10.4.0",
   "description": "A modern text styling and animation framework",

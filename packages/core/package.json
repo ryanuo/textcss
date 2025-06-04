@@ -1,10 +1,13 @@
 {
   "name": "@textcss/core",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TextCSS core - the core of TextCSS",
   "author": "Ryanuo <ryanuo@aliyun.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "funding": "https://github.com/sponsors/ryanuo",
   "homepage": "https://github.com/ryanuo/textcss#readme",
   "repository": {
