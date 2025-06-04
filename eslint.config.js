@@ -7,5 +7,6 @@ export default antfu(
     formatters: {
       css: true,
     },
+    typescript: true,
   },
 )
