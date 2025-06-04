@@ -37,7 +37,7 @@ export default defineConfig({
   cleanUrls: true,
   vite,
   themeConfig: {
-    // logo: '/logo.svg',
+    logo: '/logo.svg',
     nav: [
       {
         text: 'Guide',

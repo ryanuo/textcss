@@ -12,7 +12,9 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/ryanuo/textcss
-
+  image:
+    src: /logo.svg
+    alt: TextCSS
 features:
   - title: Text Animation
     details: Create beautiful text animations with ease. Support for typing effects, fade-ins, and more.
